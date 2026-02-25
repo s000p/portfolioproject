@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Halia Tavares</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+</head>
+
+<body>
+
+  <!-- hamburger menu made by Erik Terwan  -->
+  <div id="menuToggle">
+    <input type="checkbox" id="menuCheckbox" />
+    
+      <span></span>
+      <span></span>
+      <span></span>
+    
+      <!--Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
+      <ul id="menu">
+        <!-- We can use a label here to close upon click (when doing same page navigation), 
+        this does require a slight bit of JS.-->
+        <li>
+          <a href="index.html">
+            <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
+          </a>
+        </li>
+      
+        <!-- These just close the menu -->
+        <li><label for="menuCheckbox"><a>Info</a></label></li>
+        <li><label for="menuCheckbox"><a>Contact</a></label></li>
+      
+        <!-- Or just use regular URLs -->
+        <li>
+            <a href="https://erikterwan.com/" target="_blank">Show me more</a>
+        </li>
+      </ul>
+  </div> <!-- hamburger menu end-->
+
+  <div class="mascot">
+    <image class="mascot_image" src="assets/header_mascot.png"></image>
+  </div>
+  <div class="about_blurb">
+    <p class="blurb_script">halia was born and raised in Southern California before studying computer science and visual communication design at San Francisco State University. She is currently pursuing her love
+        of coffee working as an assistant manager at Blue Hummingbird Coffee. She has a passion for using creastivity to develop solutions. 
+    
+    when she's not working, halia enjoys trail running, ultra marathons, almond croissants, and adding to her CD collection. </p>
+  </div>
+
+
+    <!-- <section id="hero">
+
+
+
+        
+    </section> -->
+
+
+
+</body>
+</html>
