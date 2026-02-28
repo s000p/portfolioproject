@@ -16,6 +16,8 @@ body {
   justify-content: left; /* Centers horizontally */
   align-items: center; /* Centers vertically */
   height: 100vh; /* Full viewport height */
+
+  /* background-color: aqua; */
 }
 
 .mascot_image{
@@ -23,6 +25,7 @@ body {
   height: 100vh;
 
   padding-top: 100px;
+  /* background-color: RED; */
 }
 
 .logo_image{
@@ -38,43 +41,50 @@ body {
   }
 }
 
-/* @media only screen and (min-width: 768px) {
+.blurb_script{
+  /* max-height: 70%;
+  width: 100%;
+  overflow: scroll;
+  color: #8EB9FF;
+  background-color: grey;
+  padding:0;
+  margin: 0; */
+ 
+  /* c ;
+  font: silkscript;
 
-} */
-
-    /* not reviewed / cleaned */
-
-
-
-    
-    .about_blurb{
-      opacity: 0;
-      animation: fadeIn 2s forwards;
-
-      color: #8EB9FF ;
-      font: silkscript;
-
-      display: flex;
+  display: flex;
       justify-content: left;
       align-items: center;
 
-      width:50%;
+  width:50%;
       height:100vh;
       overflow:auto;
-      float:right;
-    }@keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
+      float:right; */
 
-    
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.about_blurb::-webkit-scrollbar {
+display: none; /* Hide scrollbar for WebKit browsers */
+}
 
     .blurb_script{
       padding-left: 100px;
       width: 40%;      
 
     }
+    /* not reviewed / cleaned */
+
+
+
+    
+    
 /* BLUE #8EB9FF */
 /* RED #902124 */
 
