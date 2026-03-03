@@ -1,4 +1,4 @@
-   
+  
 .silkscreen-regular {
   font-family: "Silkscreen", sans-serif;
   font-weight: 400;
@@ -16,8 +16,6 @@ body {
   justify-content: left; /* Centers horizontally */
   align-items: center; /* Centers vertically */
   height: 100vh; /* Full viewport height */
-
-  /* background-color: aqua; */
 }
 
 .mascot_image{
@@ -25,7 +23,6 @@ body {
   height: 100vh;
 
   padding-top: 100px;
-  /* background-color: RED; */
 }
 
 .logo_image{
@@ -41,26 +38,22 @@ body {
   }
 }
 
-.blurb_script{
-  /* max-height: 70%;
-  width: 100%;
-  overflow: scroll;
-  color: #8EB9FF;
-  background-color: grey;
-  padding:0;
-  margin: 0; */
- 
-  /* c ;
-  font: silkscript;
-
+.about_container{
   display: flex;
-      justify-content: left;
-      align-items: center;
+  flex-direction: row;
+  justify-content: left; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Full viewport height */
 
-  width:50%;
-      height:100vh;
-      overflow:auto;
-      float:right; */
+  overflow: hidden;
+
+}
+
+.about_blurb{
+  color:#8EB9FF;
+
+  padding: 0 50px 0 50px;
+
 
   opacity: 0;
   animation: fadeIn 2s forwards;
@@ -70,15 +63,7 @@ body {
   }
 }
 
-.about_blurb::-webkit-scrollbar {
-display: none; /* Hide scrollbar for WebKit browsers */
-}
 
-    .blurb_script{
-      padding-left: 100px;
-      width: 40%;      
-
-    }
     /* not reviewed / cleaned */
 
 
@@ -344,5 +329,3 @@ a{
   text-align: center;
   padding: 10px; /* Add some padding to prevent text from touching the edges */
 }
-
-
