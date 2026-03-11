@@ -64,20 +64,20 @@ body {
 }
 
 .gallery_container {
- column-width: 200px;
- column-gap: 1rem;
- background-color: red;
-}
+  background-color:blue ;
+  width: 96vw;
+  margin-top: 100px;
+  margin-left: 2vw;
+  margin-right: 2vw;
 
-.gallery_item {
- margin-bottom: 1rem;
- width: 100%;
- break-inside: avoid;
-}
+  overflow-x: hidden;
 
-.gallery_item image{
-  width: 100px;
-  background-color: yellow;
+}
+img{
+  width: 400px !important;
+
+  background-color: red;
+
 }
 
 
