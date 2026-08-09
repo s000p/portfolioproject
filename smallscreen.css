@@ -1,5 +1,5 @@
   
-.silkscreen-regular {
+ .silkscreen-regular { 
   font-family: "Silkscreen", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -60,6 +60,54 @@ body {
     opacity: 1;
   }
 }
+
+.gallery_container {
+  column-count: 2;
+  column-gap: 10px;
+  padding: 12px;
+}
+
+.gallery_item {
+  break-inside: avoid;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.gallery_item img {
+  width: 100%;
+  display: block;
+}
+
+.resume_paced_label {
+  color: #888;
+}
+
+.resume_races {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume_race {
+  background: #1a1a1a;
+  border: 1px solid #8EB9FF;
+}
+
+.resume_race_distance {
+  background: transparent;
+  color: #8EB9FF;
+  border: 1px solid #8EB9FF;
+}
+
+.resume_race_name {
+  color: #e1e1e1;
+}
+
+.resume_race_meta {
+  color: #888;
+}
+
 
 
     /* not reviewed / cleaned */

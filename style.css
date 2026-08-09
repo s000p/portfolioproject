@@ -1,0 +1,631 @@
+/* ==========================================================================
+   FONTS / BASE
+   ========================================================================== */
+
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Silkscreen", sans-serif;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* BLUE #8EB9FF */
+/* RED  #902124 */
+
+
+/* ==========================================================================
+   HOME / INDEX
+   ========================================================================== */
+
+.index_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  height: 100vh;
+}
+
+.mascot_image {
+  width: auto;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.logo_image {
+  width: 30%;
+  height: auto;
+
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+
+.about_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about_blurb {
+  color: #8EB9FF;
+  padding: 0 50px 0 50px;
+
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+
+/* ==========================================================================
+   GALLERY
+   ========================================================================== */
+
+.gallery_container {
+  column-count: 4;
+  column-gap: 16px;
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery_item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gallery_item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery_item:hover img {
+  transform: scale(1.03);
+}
+
+
+/* ==========================================================================
+   HAMBURGER MENU (made by Erik Terwan)
+   ========================================================================== */
+
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  z-index: 2;
+
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #8EB9FF;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+              background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  font-family: silkscreen;
+  position: absolute;
+  max-width: 400px;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  margin: -77px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: #8EB9FF;
+  list-style-type: none;
+
+  -webkit-font-smoothing: antialiased;
+
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menu li label {
+  cursor: pointer;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+  opacity: 1;
+}
+
+
+/* ==========================================================================
+   UGC PAGE
+   ========================================================================== */
+
+.header_img {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -2;
+}
+
+.ugc_portfolio {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  margin: 0;
+  padding: 0;
+}
+
+.ugc_title {
+  color: white;
+  font-size: larger;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 72vh;
+  text-align: center;
+  padding-top: 230px;
+}
+
+.social_icon {
+  width: 32px;
+  height: 32px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.ugc_about {
+  padding: 100px;
+  height: 100vh;
+}
+
+.ugc_about_blurb {
+  float: left;
+  width: 60%;
+}
+
+.test {
+  width: 500px;
+}
+
+.ugc_stat_cards {
+  justify-content: center;
+  align-items: center;
+
+  width: 10%;
+
+  overflow: auto;
+  float: left;
+}
+
+.ugc_stat {
+  display: flex;
+  align-items: center;
+}
+
+.ugc_stat_text {
+  padding-left: 10px;
+  width: 120px;
+}
+
+.ugc_stat_circle {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  background-color: #847366;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #e1e1e1;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* ==========================================================================
+   RESUME PAGE
+   ========================================================================== */
+
+.resume_container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 40px 80px;
+  color: #e1e1e1;
+}
+
+.resume_header {
+  margin-bottom: 60px;
+}
+
+.resume_header h1 {
+  color: white;
+  font-size: 36px;
+  margin: 0 0 8px 0;
+}
+
+.resume_subtitle {
+  color: #8EB9FF;
+  margin: 0 0 20px 0;
+}
+
+.resume_download {
+  display: inline-block;
+  color: #8EB9FF;
+  border: 1px solid #8EB9FF;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.resume_download:hover {
+  background: #8EB9FF;
+  color: #232323;
+}
+
+.resume_section {
+  margin-bottom: 48px;
+}
+
+.resume_section h2 {
+  color: #8EB9FF;
+  font-size: 18px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.resume_entry {
+  margin-bottom: 28px;
+}
+
+.resume_entry_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.resume_role {
+  color: white;
+  font-size: 16px;
+}
+
+.resume_date {
+  color: #888;
+  font-size: 13px;
+}
+
+.resume_company {
+  display: block;
+  color: #8EB9FF;
+  font-size: 13px;
+  margin: 4px 0 10px 0;
+}
+
+.resume_entry ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #ccc;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.resume_skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume_skills span {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #e1e1e1;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* paced-race entry marker */
+.resume_entry--paced {
+  border-left: 2px solid #8EB9FF;
+  padding-left: 12px;
+}
+
+.resume_race_tag {
+  color: #8EB9FF;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* pacing pills */
+.resume_paced_label {
+  color: #888;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 20px 0 10px 0;
+}
+
+.resume_races {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.resume_race {
+  display: flex;
+  align-items: center;
+  background: #1a1a1a;
+  border: 1px solid #8EB9FF;
+  border-radius: 20px;
+  padding: 6px 14px 6px 6px;
+  gap: 8px;
+}
+
+.resume_race_distance {
+  background: transparent;
+  color: #8EB9FF;
+  border: 1px solid #8EB9FF;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 14px;
+  white-space: nowrap;
+}
+
+.resume_race_name {
+  color: #e1e1e1;
+  font-size: 13px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.resume_race_meta {
+  color: #888;
+  font-size: 12px;
+}
+
+
+/* ==========================================================================
+   SMALL SCREEN OVERRIDES
+   Layout-only changes. Colors, fonts, and base rules above already apply —
+   never redefine them here, only what needs to differ on narrow screens.
+   ========================================================================== */
+
+@media screen and (max-width: 950px) {
+
+  /* home */
+  .index_container {
+    display: grid;
+    place-items: center;
+  }
+
+  .mascot_image {
+    order: 2;
+    width: 110%;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .logo_image {
+    order: 1;
+    width: 75%;
+    margin-top: 25%;
+  }
+
+  /* about */
+  .about_container {
+    display: grid;
+    place-items: center;
+  }
+
+  .about_blurb {
+    order: 1;
+    width: 75%;
+    height: auto;
+    margin-top: 20%;
+    margin-bottom: 5%;
+  }
+
+  /* gallery */
+  .gallery_container {
+    column-count: 2;
+    column-gap: 10px;
+    padding: 12px;
+  }
+
+  .gallery_item {
+    margin-bottom: 10px;
+    border-radius: 6px;
+  }
+
+  /* ugc */
+  .ugc_title {
+    padding-top: 150px;
+  }
+
+  .social_icon {
+    width: 28px;
+    height: 28px;
+    margin: 8px;
+  }
+
+  .ugc_about {
+    padding: 30px;
+    height: auto;
+  }
+
+  .ugc_about_blurb {
+    float: none;
+    width: 100%;
+  }
+
+  .test {
+    width: 100%;
+  }
+
+  .ugc_stat_cards {
+    width: 100%;
+    float: none;
+  }
+
+  /* resume */
+  .resume_container {
+    padding: 90px 20px 60px;
+  }
+
+  .resume_header {
+    margin-bottom: 40px;
+  }
+
+  .resume_header h1 {
+    font-size: 28px;
+  }
+
+  .resume_section {
+    margin-bottom: 36px;
+  }
+
+  .resume_section h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .resume_entry {
+    margin-bottom: 24px;
+  }
+
+  .resume_entry_top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume_role {
+    font-size: 15px;
+  }
+
+  .resume_date {
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  .resume_company {
+    font-size: 12px;
+  }
+
+  .resume_entry ul {
+    font-size: 13px;
+  }
+
+  .resume_races {
+    gap: 10px;
+  }
+
+}

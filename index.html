@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" media="screen and (min-width: 950px)" href="widescreen.css">
-  <link rel="stylesheet" media="screen and (max-width: 950px)" href="smallscreen.css">
+ <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" media="screen and (min-width: 950px)" href="widescreen.css"> -->
+  <!-- <link rel="stylesheet" media="screen and (max-width: 950px)" href="smallscreen.css"> -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,73 +13,21 @@
 
   <title>Halia Tavares</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <script src="menu.js"></script>
 
 </head>
 
 <body>
 
-  <!-- hamburger menu made by Erik Terwan  -->
-  <div id="menuToggle">
-    <input type="checkbox" id="menuCheckbox" />
-    
-      <span></span>
-      <span></span>
-      <span></span>
-    
-      <!--Too bad the menu has to be inside of the button but hey, it's pure CSS magic.-->
-      <ul id="menu">
-        <!-- We can use a label here to close upon click (when doing same page navigation), 
-        this does require a slight bit of JS.-->
-        <li>
-          <a href="#">
-            <label for="menuCheckbox" onclick="this.parentNode.click();">home</label>
-          </a>
-        </li>
-        <li>
-          <a href="about.html">
-            <label for="menuCheckbox" onclick="this.parentNode.click();">about</label>
-          </a>
-        </li>
-
-        <li>
-          <a href="gallery.html">
-            <label for="menuCheckbox" onclick="this.parentNode.click();">gallery</label>
-          </a>
-        </li>
-
-        <li>
-          <a href="about.html">
-            <label for="menuCheckbox" onclick="this.parentNode.click();">projects</label>
-          </a>
-        </li>
-
-        <li>
-          <a href="ugc.html">
-            <label for="menuCheckbox" onclick="this.parentNode.click();">ugc</label>
-          </a>
-        </li>
-
-        <li>
-          <a href="about.html">
-            <label for="menuCheckbox" onclick="this.parentNode.click();">contact</label>
-          </a>
-        </li>
+  <div id="menu-placeholder"></div>
       
-        <!-- These just close the menu -->
-        <!-- <li><label for="menuCheckbox"><a>Info</a></label></li>
-        <li><label for="menuCheckbox"><a>Contact</a></label></li> -->
-      
-        <!-- Or just use regular URLs
-        <li>
-            <a href="https://erikterwan.com/" target="_blank">Show me more</a>
-        </li> -->
-      </ul>
-  </div> <!-- hamburger menu end-->
+
 
   <div class="index_container">
     <image class="mascot_image" src="assets/header_mascot.png"></image>
     <image class="logo_image" src="assets/logo_image.png"></image>
   </div>
+
 
 </body>
 </html>
